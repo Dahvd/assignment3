@@ -1,0 +1,12 @@
+#bsoverride .hasError{
+    background-color: yellow;
+}
+.errorTxtColor {
+    color: red;
+}
+.main {
+    padding-top: 80px;
+}
+.invisible {
+    display: none;
+}
