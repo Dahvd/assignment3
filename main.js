@@ -31,7 +31,7 @@ app.post("/signup", usersController.checkUser);
 app.post("/signup", usersController.saveUser);
 
 app.get("/login", usersController.getLogIn);
-app.post("login", usersController.logIn);
+app.post("/login", usersController.logIn);
 // app.get("/subscribers", subscribersController.getAllSubscribers);
 // app.get("/contact", subscribersController.getSubscriptionPage);
 // app.post("/subscribe", subscribersController.saveSubscriber);

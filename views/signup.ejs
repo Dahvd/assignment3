@@ -12,17 +12,17 @@
                 <div class="mb-3">
                     <input type="text" id="firstNameTxt" name="firstNameTxt" required class="form-control"
                         placeholder="First Name">
-                    <div id='firstNameTxtError' class="errorTxtColor"></div>
+                    <div id='firstNameTxtError' class="invisible errorTxtColor"></div>
                 </div>
                 <div class="mb-3">
                     <input type="text" id="lastNameTxt" name="lastNameTxt" required class="form-control"
                         placeholder="Last Name">
-                    <div id='lastNameTxtError' class="errorTxtColor"></div>
+                    <div id='lastNameTxtError' class="invisible errorTxtColor"></div>
                 </div>
                 <div class="mb-3">
                     <input type="text" id="usernameTxt" name="usernameTxt" required class="form-control"
                         placeholder="@ Username">
-                    <div id='usernameTxtError' class="errorTxtColor"></div>
+                    <div id='usernameTxtError' class="invisible errorTxtColor"></div>
                 </div>
                 <div class="mb-3">
                     <select name="ddGender" id="ddGender" class="form-control">
@@ -35,12 +35,12 @@
                 </div>
                 <div class="mb-3">
                     <input type="text" id="locationTxt" name="locationTxt" class="form-control" placeholder="Location">
-                    <div id='locationTxtError' class="errorTxtColor"></div>
+                    <div id='locationTxtError' class="invisible errorTxtColor"></div>
                 </div>
                 <div class="mb-3">
                     <input type="email" id="emailInput" name="emailInput" required class="form-control"
                         placeholder="Email">
-                    <div id='emailInputError' class="errorTxtColor"></div>
+                    <div id='emailInputError' class="invisible errorTxtColor"></div>
                 </div>
                 <div class="mb-3">
                     <input type="password" id="passwordInput" name="passwordInput" required class="form-control"
@@ -151,7 +151,6 @@
         }
     </script>
 
-    <%- include('partials/footer') %>
 
         <script src="/js/signup.js"></script>
 </div>

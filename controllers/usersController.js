@@ -91,7 +91,7 @@ exports.saveUser = (req, res) => {
 };
 
 exports.getLogIn = (req, res) => {
-    res.render("signin");
+    res.render("signin", {errorMsg: false, emailData: "none"});
 };
 
 
@@ -99,4 +99,27 @@ exports.logIn = (req, res) => {
     //check database to see if credentials exist and render home if they do otherwise give that error
     let emailToCheck = req.body.emailInput;
     let passwordToCheck = req.body.passwordInput;
+
+    User.findOne({email: emailToCheck})
+    .exec()
+    .then(user => {
+
+
+        if(user == false){
+
+            res.render("signin", {errorMsg: 1, emailData: "none"});
+            console.log("1");
+        }
+        else{
+            //user exists so check password
+            if(user.password != passwordToCheck){
+                res.render("signin", {errorMsg: 2, emailData: emailToCheck});
+                console.log("2");
+            }
+            else{
+                //email and password are correct so login
+                res.render("home");
+            }
+        }
+    })
 };

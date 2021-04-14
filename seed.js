@@ -17,7 +17,7 @@ var people = [
     gender: "Male",
     location: "",
     email: "david@gmail.com", 
-    password: "pass",
+    password: "Pass1",
     securityQ: "What color was your first car?",
     securityA: "Blue"
   },
@@ -28,7 +28,7 @@ var people = [
     gender: "Male",
     location: "",
     email: "fernando@gmail.com", 
-    password: "pass",
+    password: "Pass2",
     securityQ: "What color was your first car?",
     securityA: "Red"
   },
@@ -39,7 +39,7 @@ var people = [
     gender: "Male",
     location: "",
     email: "matt@gmail.com", 
-    password: "pass",
+    password: "Pass1",
     securityQ: "What color was your first car?",
     securityA: "Black"
   }

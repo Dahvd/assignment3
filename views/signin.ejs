@@ -8,16 +8,18 @@
         </h1>
     </div>
 
-    <form>
+    <form method="post" action="/login"> 
         <div class="d-flex align-items-center justify-content-center">
             <div class="form-group row col-xxl-3 col-xl-4 col-lg-5 col-md-5 col-sm-7 col-7">
                 <div class="mb-3">
                     <input type="email" id="emailInput" name="emailInput" required class="form-control"
                         placeholder="Email">
+                    <div id="emailInputError" class="invisible errorTxtColor"></div>
                 </div>
                 <div>
                     <input type="password" id="passwordInput" name="passwordInput" required class="form-control"
                         placeholder="Password">
+                    <div id="passwordInputError" class="invisible errorTxtColor"></div>
                 </div>
 
                 <div class="d-flex align-items-center justify-content-center mt-2">
@@ -35,6 +37,7 @@
         </div>
     </form>
 
+
     <div class="d-flex justify-content-center row m-0">
         <div
             class="d-flex justify-content-lg-end justify-content-md-end justify-content-center col-lg-5 col-md-3 col-sm-10">
@@ -46,7 +49,27 @@
         </div>
     </div>
 
-    <%- include('partials/footer') %>
+    
+    <script>
+        let errorMsg = <%-JSON.stringify(errorMsg)%>;
+        if(errorMsg != false){
+            if(errorMsg == 1){//email error
+                let e = document.getElementById("emailInputError");
+                e.classList.remove("invisible");
+                e.innerHTML = "Sorry, a user with that email does not exist";
+            }
+            else if(errorMsg == 2){
+                let e = document.getElementById("passwordInputError");
+                e.classList.remove("invisible");
+                e.innerHTML = "The password you’ve entered is incorrect";
+                document.getElementById("emailInput").value = <%-JSON.stringify(emailData)%>;
+
+            }
+
+
+        }
+    </script>
+
 
     
 </div>
