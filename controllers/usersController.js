@@ -103,9 +103,9 @@ exports.logIn = (req, res) => {
     User.findOne({email: emailToCheck})
     .exec()
     .then(user => {
+        console.log(user);
 
-
-        if(user == false){
+        if(user == false || user == null){
 
             res.render("signin", {errorMsg: 1, emailData: "none"});
             console.log("1");
