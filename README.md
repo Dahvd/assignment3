@@ -12,7 +12,7 @@ npm install
 node seed
 npm start
 ```
-## Sign up - David
+## Sign up
 The sign up form works as follows.  
 
 In main.js there is an app.get which shows the signup page, and two app.posts.  The first checks the user and the second saves the user and is called from a next function in checkUser.  Please let me know if this was the correct way to do this.
@@ -23,7 +23,7 @@ The fields of the newUser are checked to see if any of the required field was le
 
 The data passed to the template includes the fields the user previously filled out, in order to repopulate the form, and the fileds which were left blank all get their background color changed to yellow.  A div with an error message in red text is also shown below the blank element.  This will happen untill all of the required fields are filled in.  Once all required fields are filled in, the checkUser methods calls next(); which then calls the saveUser method which saves the user to the database.  I wasn't sure if that was the right way to do that.  Please let me know.
 
-## Log In - Fernando
+## Log In
 The login form works as follows.
 
 In main.js there is an app.get which shows the login page.  There is also an app.post which checks the login credentials and once verified renders the home.ejs page.
